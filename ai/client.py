@@ -10,6 +10,7 @@ from models import SystemOnePrompt
 class SystemOneClient():
     """
     A client for interacting with a Typesafe Compatible API, specifically designed to handle System One style prompts and questions.
+    Note: if you set your environment variables up properly, this can be used for `Jev` directly.
     """
 
     def __init__(self) -> None:
