@@ -108,6 +108,10 @@ def report_responses(questions: dict, response: SystemOneResponse):
 
 
 def get_prompt_file():
+    """
+    Parses command line arguments to get the prompt file path.
+    :return: The path to the prompt file.
+    """
     parser = argparse.ArgumentParser(description="Process a single target file.")
 
     # Add the filename positional argument
