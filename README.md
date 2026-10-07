@@ -12,6 +12,6 @@ run them locally on your own machine.
 1. Clone the repository
 2. Copy `.env-example` to `.env` and fill in the required values.
 3. Run `uv sync`
-4. Start the app by running `uv run main.py`
+4. Start the app by running `uv run main.py --promptfile prompts/cube-rule-of-food.yml`
 
 Note that the first time the model is called after load is kind of slow, but later calls are very fast.
