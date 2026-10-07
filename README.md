@@ -15,3 +15,10 @@ run them locally on your own machine.
 4. Start the app by running `uv run main.py --promptfile prompts/cube-rule-of-food.yml`
 
 Note that the first time the model is called after load is kind of slow, but later calls are very fast.
+
+## Running with Jev
+Everything about this demo is 100% [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) compatible. If you have access to 
+Jev and would like to try it out:
+1. Copy the `.env-example` to `.env`
+2. Comment out or remove the active lines for `Ollama`
+3. Uncomment the `Jev` lines and fill in your API key.
