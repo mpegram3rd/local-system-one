@@ -1,3 +1,4 @@
+import argparse
 import os
 import time
 
@@ -6,7 +7,7 @@ from dotenv import load_dotenv
 from typesafe_sdk import TypeSafeClient, Score, Noul, Choice, SystemOneResponse, NoulAnswer, ChoiceAnswer, ScoreAnswer
 
 
-def read_prompt(file_name: str = 'input.yml') -> dict:
+def read_prompt(file_name: str = 'prompts/prompt.yml') -> dict:
     """
     Reads the prompt from a YAML file and returns it as a dictionary.
     :param file_name: The name of the YAML file to read.
@@ -106,11 +107,26 @@ def report_responses(questions: dict, response: SystemOneResponse):
         print("---------------------------")
 
 
+def get_prompt_file():
+    parser = argparse.ArgumentParser(description="Process a single target file.")
+
+    # Add the filename positional argument
+    parser.add_argument("--prompt",
+                    type=str,
+                    help="The path to the prompt you want to run",
+                    required=False,
+                    default="prompts/prompt.yml")
+
+    # Parse the arguments
+    args = parser.parse_args()
+
+    return args.prompt
 
 def main():
     load_dotenv()
     print('Loading Prompt....')
-    prompt = read_prompt()
+    prompt_file = get_prompt_file()
+    prompt = read_prompt(prompt_file)
     state = prompt['state']
     questions = parse_questions(prompt['questions'])
 
