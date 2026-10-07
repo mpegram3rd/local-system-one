@@ -1,6 +1,5 @@
 import os
 import time
-from abc import ABC
 
 from dotenv import load_dotenv
 from typesafe_sdk import TypeSafeClient
@@ -8,7 +7,7 @@ from typesafe_sdk import TypeSafeClient
 from models import SystemOnePrompt
 
 
-class SystemOneClient(ABC):
+class SystemOneClient():
     """
     A client for interacting with a Typesafe Compatible API, specifically designed to handle System One style prompts and questions.
     """

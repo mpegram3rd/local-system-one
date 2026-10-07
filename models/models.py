@@ -1,9 +1,8 @@
-from abc import ABC
 import yaml
 from typesafe_sdk import Choice, Noul, Score
 
 
-class SystemOnePrompt(ABC):
+class SystemOnePrompt():
     """
     A class representing a System One style prompt, including its stat(context)
     and a collection of associated questions.
