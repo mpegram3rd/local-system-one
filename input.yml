@@ -1,0 +1,54 @@
+state: |
+  The Cube Rule of Food is a humorous way to classify foods based on their shape and geometrical 
+  structure of where starch in a food item is located. 
+  Starch can be found in bread, dough, rice, chips, crusts, potatoes and/or pastries in a food item.
+  Here are the categories based on the number of sides a food has starch on it:
+  Toast - Has starch only on the bottom.  Examples include pizza, nigiri sushi and open face sandwiches
+  Sandwich - Has starch on the top and bottom.  Examples include quesadillas, and closed faced sandwiches
+  Taco - Has starch on the bottom and two sides.  Examples include tacos, hot dogs, and a sub sandwich (uncut)
+  Sushi - Has starch on the bottom and three sides.  Examples include falafel wrap, pigs in a blanket, and an enchilada
+  Quiche - Has starch on the bottom and four sides.  Examples include falafel in a pita, and soup in a bread bowl, and deep dish pizza before it is cut
+  Calzone - Has starch on the bottom and five sides.  Examples include a calzone, dumplings, pop-tarts, a whole pie, corn dog and a burrito
+  Salad - Has no starch on any side. Examples include a steak, chocolate, soup and flan
+  Cake - has starch in layers.  Examples include lasagna, a big mac, and a stack of pancakes
+
+questions:
+  - pbj-taco:
+        question: Is a Peanut Butter and Jelly Sandwich a Taco?
+        type: noul
+  - pbj-sandwich:
+        question: Is a Peanut Butter and Jelly Sandwich a Sandwich?
+        type: noul
+  - cannoli-classify:
+        question: How would you classify a cannoli using the Cube Rule of Food?
+        type: choice
+        choices:
+          - Toast: Has starch only on the bottom
+          - Sandwich: Has starch on the top and bottom
+          - Taco: Has starch on the bottom and two sides
+          - Sushi: Has starch on the bottom and three sides
+          - Quiche: Has starch on the bottom and four sides
+          - Calzone: Has starch on the bottom and five sides
+          - Salad: Has no starch on any side
+          - Cake: Has starch in layers
+  - ravioli-classify:
+        question: How would you classify a ravioli using the Cube Rule of Food?
+        type: choice
+        choices:
+          - Toast: Has starch only on the bottom
+          - Sandwich: Has starch on the top and bottom
+          - Taco: Has starch on the bottom and two sides
+          - Sushi: Has starch on the bottom and three sides
+          - Quiche: Has starch on the bottom and four sides
+          - Calzone: Has starch on the bottom and five sides
+          - Salad: Has no starch on any side
+          - Cake: Has starch in layers
+  - absurdity:
+        question: Is the Cube Rule of Food a serious classification system?
+        type: score
+        criteria:
+          - Not at all
+          - Slightly
+          - Moderately
+          - Very
+          - Extremely
