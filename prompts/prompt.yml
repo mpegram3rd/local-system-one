@@ -1,0 +1,6 @@
+state: It is a clear, sunny day today.
+
+questions:
+  - sky-color:
+        question: Is the sky blue?
+        type: noul
