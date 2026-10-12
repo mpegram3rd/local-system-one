@@ -40,6 +40,8 @@ class SystemOnePrompt():
                     self.questions[key] = Noul(
                         instructions=value['question']
                     )
+                    if value['criteria'] is not None:
+                        self.questions[key].criteria = value['criteria']
                 elif value['type'] == 'score':
                     self.questions[key] = Score(
                         instructions=value['question'],
